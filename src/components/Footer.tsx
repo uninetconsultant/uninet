@@ -63,7 +63,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-2 text-sm text-primary-foreground/80">
                 <Phone className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span>+1 (555) 123-4567</span>
+                <a href="tel:(833)611-6434" className="hover:text-primary-foreground transition-colors">(833) 611-6434</a>
               </li>
               <li className="flex items-start gap-2 text-sm text-primary-foreground/80">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
@@ -73,20 +73,42 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Legal Links */}
+        <div className="mt-8 pt-8 border-t border-primary-foreground/20">
+          <div className="mb-6">
+            <h3 className="font-semibold text-lg mb-4">Legal</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <Link 
+                to="/privacy" 
+                className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors hover:underline"
+              >
+                Privacy Policy
+              </Link>
+              <Link 
+                to="/refund-policy" 
+                className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors hover:underline"
+              >
+                Refund Policy
+              </Link>
+              <Link 
+                to="/terms" 
+                className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors hover:underline"
+              >
+                Terms & Conditions
+              </Link>
+            </div>
+          </div>
+        </div>
+
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-primary-foreground/20">
+        <div className="pt-8 border-t border-primary-foreground/20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-primary-foreground/80">
               © {currentYear} Uninet Consultant. All rights reserved.
             </p>
-            <div className="flex gap-6 text-sm text-primary-foreground/80">
-              <Link to="/privacy" className="hover:text-primary-foreground transition-colors">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="hover:text-primary-foreground transition-colors">
-                Terms of Service
-              </Link>
-            </div>
+            <p className="text-sm text-primary-foreground/80">
+              Trusted Internet Solutions & Expert Consulting
+            </p>
           </div>
         </div>
       </div>
