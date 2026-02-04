@@ -7,8 +7,13 @@ const CallNowPopup = () => {
   const phoneNumber = "(833) 611-6434";
 
   useEffect(() => {
-    // Show popup on component mount (page load)
-    setIsOpen(true);
+    // Show popup after 5 seconds
+    const timer = setTimeout(() => {
+      setIsOpen(true);
+    }, 5000);
+
+    // Cleanup timer on unmount
+    return () => clearTimeout(timer);
   }, []);
 
   if (!isOpen) return null;
